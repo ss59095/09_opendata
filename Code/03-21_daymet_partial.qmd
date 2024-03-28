@@ -177,7 +177,7 @@ daymet_extracted <- extracted
 
 ```{r}
 daymet_all <- field %>%
-  slice(1:5) %>%
+  #slice(1:5) %>%
   mutate(weather = pmap(list(.y = year,
                              .site = site,
                              .lat = lat,
@@ -231,8 +231,9 @@ Therefore, a best practice here is to pull weather data once and export it to fi
 
 Let's do that below:  
 ```{r}
-write_csv(daymet_all_unnest,
-          "../Data/fieldweatherdata.csv")
+write_csv(daymet_all,
+          "../Data/fieldweatherdata.csv"
+          )
 ```
 
 
