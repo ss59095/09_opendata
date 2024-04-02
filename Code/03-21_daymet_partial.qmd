@@ -231,7 +231,7 @@ Therefore, a best practice here is to pull weather data once and export it to fi
 
 Let's do that below:  
 ```{r}
-write_csv(daymet_all,
+write_csv(daymet_all_unnest,
           "../Data/fieldweatherdata.csv"
           )
 ```
